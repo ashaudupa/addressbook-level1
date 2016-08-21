@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
@@ -176,8 +177,8 @@ public class AddressBook {
     /**
      * List of all persons in the address book.
      */
-    private static final ArrayList<String[]> ALL_PERSONS = new ArrayList<>();
-
+   // private static final ArrayList<String[]> ALL_PERSONS = new ArrayList<>();
+    private static final ArrayList<HashMap<String,String>> ALL_PERSONS = new ArrayList<>();
 
     /**
      * Stores the most recent list of persons shown to the user as a result of a user command.
@@ -395,7 +396,8 @@ public class AddressBook {
         }
 
         // add the person as specified
-        final String[] personToAdd = decodeResult.get();
+        //final String[] personToAdd = decodeResult.get();
+        final HashMap<String,String> personToAdd = decodeResult.get();
         addPersonToAddressBook(personToAdd);
         return getMessageForSuccessfulAddPerson(personToAdd);
     }
@@ -760,7 +762,8 @@ public class AddressBook {
      *
      * @param person to add
      */
-    private static void addPersonToAddressBook(String[] person) {
+    //private static void addPersonToAddressBook(String[] person) {
+	private static void addPersonToAddressBook(HashMap<String,String> person) { 	
         ALL_PERSONS.add(person);
         savePersonsToFile(getAllPersonsInAddressBook(), storageFilePath);
     }
