@@ -716,7 +716,7 @@ public class AddressBook {
 	 * listAsString = getDisplayString(persons); showToUser(listAsString);
 	 * updateLatestViewedPersonListing(persons); }
 	 */
-	private static void showToUser(ArrayList<HashMap<String, String>> persons) {
+	private static void showToUser(ArrayList<HashMap<PersonProperty, String>> persons) {
 		String listAsString = getDisplayString(persons);
 		showToUser(listAsString);
 		updateLatestViewedPersonListing(persons);
