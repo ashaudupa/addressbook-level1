@@ -627,7 +627,7 @@ public class AddressBook {
 	 * getMessageForFormattedPersonData(deletedPerson)); }
 	 */
 	private static String getMessageForSuccessfulDelete(
-			HashMap<String, String> deletedPerson) {
+			HashMap<PersonProperty, String> deletedPerson) {
 		return String.format(MESSAGE_DELETE_PERSON_SUCCESS,
 				getMessageForFormattedPersonData(deletedPerson));
 	}
