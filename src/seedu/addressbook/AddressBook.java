@@ -1013,7 +1013,7 @@ public class AddressBook {
 	 * persons) { ALL_PERSONS.clear(); ALL_PERSONS.addAll(persons); }
 	 */
 	private static void initialiseAddressBookModel(
-			ArrayList<HashMap<String, String>> persons) {
+			ArrayList<HashMap<PersonProperty, String>> persons) {
 		ALL_PERSONS.clear();
 		ALL_PERSONS.addAll(persons);
 	}
