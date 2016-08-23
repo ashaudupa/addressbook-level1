@@ -1029,7 +1029,7 @@ public class AddressBook {
 	 * @return person's name
 	 */
 	// private static String getNameFromPerson(String[] person) {
-	private static String getNameFromPerson(HashMap<String, String> person) {
+	private static String getNameFromPerson(HashMap<PersonProperty, String> person) {
 		return person.get(PERSON_PROPERTY_NAME);
 		// return person[PERSON_DATA_INDEX_NAME];
 	}
