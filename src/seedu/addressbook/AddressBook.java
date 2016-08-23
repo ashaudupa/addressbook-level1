@@ -912,7 +912,7 @@ public class AddressBook {
 	 * exitProgram(); } }
 	 */
 	private static void savePersonsToFile(
-			ArrayList<HashMap<String, String>> persons, String filePath) {
+			ArrayList<HashMap<PersonProperty, String>> persons, String filePath) {
 		final ArrayList<String> linesToWrite = encodePersonsToStrings(persons);
 		try {
 			Files.write(Paths.get(storageFilePath), linesToWrite);
