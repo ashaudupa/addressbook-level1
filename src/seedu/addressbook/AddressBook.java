@@ -1148,7 +1148,7 @@ public class AddressBook {
 	 */
 	// private static Optional<String[]> decodePersonFromString(String encoded)
 	// {
-	private static Optional<HashMap<String, String>> decodePersonFromString(
+	private static Optional<HashMap<PersonProperty, String>> decodePersonFromString(
 			String encoded) {
 		// check that we can extract the parts of a person from the encoded
 		// string
@@ -1156,7 +1156,7 @@ public class AddressBook {
 			return Optional.empty();
 		}
 		// final String[] decodedPerson = makePersonFromData(
-		final HashMap<String, String> decodedPerson = makePersonFromData(
+		final HashMap<PersonProperty, String> decodedPerson = makePersonFromData(
 				extractNameFromPersonString(encoded),
 				extractPhoneFromPersonString(encoded),
 				extractEmailFromPersonString(encoded));
