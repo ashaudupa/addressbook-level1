@@ -767,7 +767,7 @@ public class AddressBook {
 	 */
 	// private static String getMessageForFormattedPersonData(String[] person) {
 	private static String getMessageForFormattedPersonData(
-			HashMap<String, String> person) {
+			HashMap<PersonProperty, String> person) {
 		return String.format(MESSAGE_DISPLAY_PERSON_DATA,
 				getNameFromPerson(person), getPhoneFromPerson(person),
 				getEmailFromPerson(person));
