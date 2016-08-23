@@ -531,10 +531,10 @@ public class AddressBook {
 	 * (!Collections.disjoint(wordsInName, keywords)) {
 	 * matchedPersons.add(person); } } return matchedPersons; }
 	 */
-	private static ArrayList<HashMap<String, String>> getPersonsWithNameContainingAnyKeyword(
+	private static ArrayList<HashMap<PersonProperty, String>> getPersonsWithNameContainingAnyKeyword(
 			Collection<String> keywords) {
-		final ArrayList<HashMap<String, String>> matchedPersons = new ArrayList<>();
-		for (HashMap<String, String> person : getAllPersonsInAddressBook()) {
+		final ArrayList<HashMap<PersonProperty, String>> matchedPersons = new ArrayList<>();
+		for (HashMap<PersonProperty, String> person : getAllPersonsInAddressBook()) {
 			final Set<String> wordsInName = new HashSet<>(
 					splitByWhitespace(getNameFromPerson(person)));
 			if (!Collections.disjoint(wordsInName, keywords)) {
