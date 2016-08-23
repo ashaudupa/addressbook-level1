@@ -1043,8 +1043,9 @@ public class AddressBook {
 	 * private static String getPhoneFromPerson(String[] person) { return
 	 * person[PERSON_DATA_INDEX_PHONE]; }
 	 */
-	private static String getPhoneFromPerson(HashMap<String, String> person) {
-		return person.get(PERSON_PROPERTY_PHONE);
+	private static String getPhoneFromPerson(HashMap<PersonProperty, String> person) {
+		//return person.get(PERSON_PROPERTY_PHONE);
+		return person.get(PersonProperty.NAME);
 	}
 
 	/**
