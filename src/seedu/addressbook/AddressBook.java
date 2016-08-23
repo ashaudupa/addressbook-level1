@@ -1057,8 +1057,9 @@ public class AddressBook {
 	 * private static String getEmailFromPerson(String[] person) { return
 	 * person[PERSON_DATA_INDEX_EMAIL]; }
 	 */
-	private static String getEmailFromPerson(HashMap<String, String> person) {
-		return person.get(PERSON_PROPERTY_EMAIL);
+	private static String getEmailFromPerson(HashMap<PersonProperty, String> person) {
+		//return person.get(PERSON_PROPERTY_EMAIL);
+		return person.get(PersonProperty.EMAIL);
 	}
 
 	/**
