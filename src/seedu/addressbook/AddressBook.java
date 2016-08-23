@@ -727,10 +727,10 @@ public class AddressBook {
 	 */
 	// private static String getDisplayString(ArrayList<String[]> persons) {
 	private static String getDisplayString(
-			ArrayList<HashMap<String, String>> persons) {
+			ArrayList<HashMap<PersonProperty, String>> persons) {
 		final StringBuilder messageAccumulator = new StringBuilder();
 		for (int i = 0; i < persons.size(); i++) {
-			final HashMap<String, String> person = persons.get(i);
+			final HashMap<PersonProperty, String> person = persons.get(i);
 			final int displayIndex = i + DISPLAYED_INDEX_OFFSET;
 			messageAccumulator
 					.append('\t')
