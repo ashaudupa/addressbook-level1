@@ -562,7 +562,7 @@ public class AddressBook {
 		}
 		// final String[] targetInModel =
 		// getPersonByLastVisibleIndex(targetVisibleIndex);
-		final HashMap<String, String> targetInModel = getPersonByLastVisibleIndex(targetVisibleIndex);
+		final HashMap<PersonProperty, String> targetInModel = getPersonByLastVisibleIndex(targetVisibleIndex);
 		return deletePersonFromAddressBook(targetInModel) ? getMessageForSuccessfulDelete(targetInModel) // success
 				: MESSAGE_PERSON_NOT_IN_ADDRESSBOOK; // not found
 	}
