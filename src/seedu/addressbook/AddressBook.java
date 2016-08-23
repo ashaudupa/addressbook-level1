@@ -418,7 +418,7 @@ public class AddressBook {
 		// try decoding a person from the raw args
 		// final Optional<String[]> decodeResult =
 		// decodePersonFromString(commandArgs);
-		final Optional<HashMap<String, String>> decodeResult = decodePersonFromString(commandArgs);
+		final Optional<HashMap<PersonProperty, String>> decodeResult = decodePersonFromString(commandArgs);
 
 		// checks if args are valid (decode result will not be present if the
 		// person is invalid)
@@ -429,7 +429,7 @@ public class AddressBook {
 
 		// add the person as specified
 		// final String[] personToAdd = decodeResult.get();
-		final HashMap<String, String> personToAdd = decodeResult.get();
+		final HashMap<PersonProperty, String> personToAdd = decodeResult.get();
 		/*
 		 * final HashMap<String,String> personToAdd = new
 		 * HashMap<String,String>(); personToAdd.put(PERSON_PROPERTY_NAME,
