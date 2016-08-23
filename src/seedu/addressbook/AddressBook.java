@@ -654,7 +654,7 @@ public class AddressBook {
 	 * getMessageForPersonsDisplayedSummary(toBeDisplayed); }
 	 */
 	private static String executeListAllPersonsInAddressBook() {
-		ArrayList<HashMap<String, String>> toBeDisplayed = getAllPersonsInAddressBook();
+		ArrayList<HashMap<PersonProperty, String>> toBeDisplayed = getAllPersonsInAddressBook();
 		showToUser(toBeDisplayed);
 		return getMessageForPersonsDisplayedSummary(toBeDisplayed);
 	}
