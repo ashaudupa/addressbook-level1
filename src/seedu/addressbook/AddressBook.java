@@ -816,7 +816,7 @@ public class AddressBook {
 	 * private static ArrayList<String[]> getLatestPersonListingView() { return
 	 * latestPersonListingView; }
 	 */
-	private static ArrayList<HashMap<String, String>> getLatestPersonListingView() {
+	private static ArrayList<HashMap<PersonProperty, String>> getLatestPersonListingView() {
 		return latestPersonListingView;
 	}
 
