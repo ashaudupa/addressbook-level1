@@ -1309,10 +1309,13 @@ public class AddressBook {
 	 * isPersonPhoneValid(person[PERSON_DATA_INDEX_PHONE]) &&
 	 * isPersonEmailValid(person[PERSON_DATA_INDEX_EMAIL]); }
 	 */
-	private static boolean isPersonDataValid(HashMap<String, String> person) {
-		return isPersonNameValid(person.get(PERSON_PROPERTY_NAME))
+	private static boolean isPersonDataValid(HashMap<PersonProperty, String> person) {
+		/*return isPersonNameValid(person.get(PERSON_PROPERTY_NAME))
 				&& isPersonPhoneValid(person.get(PERSON_PROPERTY_PHONE))
-				&& isPersonEmailValid(person.get(PERSON_PROPERTY_EMAIL));
+				&& isPersonEmailValid(person.get(PERSON_PROPERTY_EMAIL));*/
+		return isPersonNameValid(person.get(PersonProperty.NAME))
+				&& isPersonPhoneValid(person.get(PersonProperty.PHONE))
+				&& isPersonEmailValid(person.get(PersonProperty.EMAIL));
 	}
 
 	/*
