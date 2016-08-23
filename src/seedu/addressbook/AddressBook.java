@@ -803,7 +803,7 @@ public class AddressBook {
 	 * { return latestPersonListingView.get(lastVisibleIndex -
 	 * DISPLAYED_INDEX_OFFSET); }
 	 */
-	private static HashMap<String, String> getPersonByLastVisibleIndex(
+	private static HashMap<PersonProperty, String> getPersonByLastVisibleIndex(
 			int lastVisibleIndex) {
 		return latestPersonListingView.get(lastVisibleIndex
 				- DISPLAYED_INDEX_OFFSET);
