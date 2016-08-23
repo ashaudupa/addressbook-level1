@@ -971,7 +971,7 @@ public class AddressBook {
 	 * return changed; }
 	 */
 	private static boolean deletePersonFromAddressBook(
-			HashMap<String, String> exactPerson) {
+			HashMap<PersonProperty, String> exactPerson) {
 		final boolean changed = ALL_PERSONS.remove(exactPerson);
 		if (changed) {
 			savePersonsToFile(getAllPersonsInAddressBook(), storageFilePath);
