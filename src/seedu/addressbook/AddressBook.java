@@ -865,9 +865,9 @@ public class AddressBook {
 	 * showToUser(MESSAGE_INVALID_STORAGE_FILE_CONTENT); exitProgram(); } return
 	 * successfullyDecoded.get(); }
 	 */
-	private static ArrayList<HashMap<String, String>> loadPersonsFromFile(
+	private static ArrayList<HashMap<PersonProperty, String>> loadPersonsFromFile(
 			String filePath) {
-		final Optional<ArrayList<HashMap<String, String>>> successfullyDecoded = decodePersonsFromStrings(getLinesInFile(filePath));
+		final Optional<ArrayList<HashMap<PersonProperty, String>>> successfullyDecoded = decodePersonsFromStrings(getLinesInFile(filePath));
 		if (!successfullyDecoded.isPresent()) {
 			showToUser(MESSAGE_INVALID_STORAGE_FILE_CONTENT);
 			exitProgram();
