@@ -785,7 +785,7 @@ public class AddressBook {
 	 * latestPersonListingView = new ArrayList<>(newListing); }
 	 */
 	private static void updateLatestViewedPersonListing(
-			ArrayList<HashMap<String, String>> newListing) {
+			ArrayList<HashMap<PersonProperty, String>> newListing) {
 		// clone to insulate from future changes to arg list
 		latestPersonListingView = new ArrayList<>(newListing);
 	}
