@@ -1076,18 +1076,22 @@ public class AddressBook {
 	 */
 	// private static String[] makePersonFromData(String name, String phone,
 	// String email) {
-	private static HashMap<String, String> makePersonFromData(String name,
+	private static HashMap<PersonProperty, String> makePersonFromData(String name,
 			String phone, String email) {
 		// final String[] person = new String[PERSON_DATA_COUNT];
-		final HashMap<String, String> person = new HashMap();
+		final HashMap<PersonProperty, String> person = new HashMap();
 		/*
 		 * person[PERSON_DATA_INDEX_NAME] = name;
 		 * person[PERSON_DATA_INDEX_PHONE] = phone;
 		 * person[PERSON_DATA_INDEX_EMAIL] = email;
 		 */
-		person.put(PERSON_PROPERTY_NAME, name);
+		/*person.put(PERSON_PROPERTY_NAME, name);
 		person.put(PERSON_PROPERTY_PHONE, phone);
-		person.put(PERSON_PROPERTY_EMAIL, email);
+		person.put(PERSON_PROPERTY_EMAIL, email);*/
+		
+		person.put(PersonProperty.NAME, name);
+		person.put(PersonProperty.PHONE, phone);
+		person.put(PersonProperty.EMAIL, email);
 		return person;
 	}
 
