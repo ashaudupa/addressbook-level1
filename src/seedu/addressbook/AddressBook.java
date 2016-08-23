@@ -1107,7 +1107,7 @@ public class AddressBook {
 	 * String.format(PERSON_STRING_REPRESENTATION, getNameFromPerson(person),
 	 * getPhoneFromPerson(person), getEmailFromPerson(person)); }
 	 */
-	private static String encodePersonToString(HashMap<String, String> person) {
+	private static String encodePersonToString(HashMap<PersonProperty, String> person) {
 		return String.format(PERSON_STRING_REPRESENTATION,
 				getNameFromPerson(person), getPhoneFromPerson(person),
 				getEmailFromPerson(person));
