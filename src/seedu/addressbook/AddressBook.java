@@ -489,7 +489,7 @@ public class AddressBook {
 	// return String.format(MESSAGE_PERSONS_FOUND_OVERVIEW,
 	// personsDisplayed.size());
 	private static String getMessageForPersonsDisplayedSummary(
-			ArrayList<HashMap<String, String>> personsDisplayed) {
+			ArrayList<HashMap<PersonProperty, String>> personsDisplayed) {
 		return String.format(MESSAGE_PERSONS_FOUND_OVERVIEW,
 				personsDisplayed.size());
 	}
