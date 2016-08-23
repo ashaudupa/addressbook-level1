@@ -470,7 +470,7 @@ public class AddressBook {
 		final Set<String> keywords = extractKeywordsFromFindPersonArgs(commandArgs);
 		// final ArrayList<String[]> personsFound =
 		// getPersonsWithNameContainingAnyKeyword(keywords);
-		final ArrayList<HashMap<String, String>> personsFound = getPersonsWithNameContainingAnyKeyword(keywords);
+		final ArrayList<HashMap<PersonProperty, String>> personsFound = getPersonsWithNameContainingAnyKeyword(keywords);
 		showToUser(personsFound);
 		return getMessageForPersonsDisplayedSummary(personsFound);
 	}
