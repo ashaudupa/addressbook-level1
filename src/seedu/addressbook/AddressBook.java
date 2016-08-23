@@ -154,6 +154,9 @@ public class AddressBook {
 	private static final String PERSON_PROPERTY_NAME = "name";
 	private static final String PERSON_PROPERTY_PHONE = "phone";
 	private static final String PERSON_PROPERTY_EMAIL = "email";
+	
+	private enum PersonProperty {NAME,PHONE,EMAIL};
+	
 
 	/**
 	 * The number of data elements for a single person.
@@ -194,7 +197,7 @@ public class AddressBook {
 	 * List of all persons in the address book.
 	 */
 	// private static final ArrayList<String[]> ALL_PERSONS = new ArrayList<>();
-	private static final ArrayList<HashMap<String, String>> ALL_PERSONS = new ArrayList<>();
+	private static final ArrayList<HashMap<PersonProperty, String>> ALL_PERSONS = new ArrayList<>();
 
 	/**
 	 * Stores the most recent list of persons shown to the user as a result of a
@@ -203,7 +206,7 @@ public class AddressBook {
 	 */
 	// private static ArrayList<String[]> latestPersonListingView =
 	// getAllPersonsInAddressBook(); // initial view is of all
-	private static ArrayList<HashMap<String, String>> latestPersonListingView = getAllPersonsInAddressBook();
+	private static ArrayList<HashMap<PersonProperty, String>> latestPersonListingView = getAllPersonsInAddressBook();
 	/**
 	 * The path to the file used for storing person data.
 	 */
@@ -933,7 +936,7 @@ public class AddressBook {
 	 *            to add
 	 */
 	// private static void addPersonToAddressBook(String[] person) {
-	private static void addPersonToAddressBook(HashMap<String, String> person) {
+	private static void addPersonToAddressBook(HashMap<PersonProperty, String> person) {
 		ALL_PERSONS.add(person);
 		savePersonsToFile(getAllPersonsInAddressBook(), storageFilePath);
 	}
@@ -983,7 +986,7 @@ public class AddressBook {
 	 * private static ArrayList<String[]> getAllPersonsInAddressBook() { return
 	 * ALL_PERSONS; }
 	 */
-	private static ArrayList<HashMap<String, String>> getAllPersonsInAddressBook() {
+	private static ArrayList<HashMap<PersonProperty, String>> getAllPersonsInAddressBook() {
 		return ALL_PERSONS;
 	}
 
