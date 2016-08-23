@@ -1128,9 +1128,9 @@ public class AddressBook {
 	 * persons) { encoded.add(encodePersonToString(person)); } return encoded; }
 	 */
 	private static ArrayList<String> encodePersonsToStrings(
-			ArrayList<HashMap<String, String>> persons) {
+			ArrayList<HashMap<PersonProperty, String>> persons) {
 		final ArrayList<String> encoded = new ArrayList<>();
-		for (HashMap<String, String> person : persons) {
+		for (HashMap<PersonProperty, String> person : persons) {
 			encoded.add(encodePersonToString(person));
 		}
 		return encoded;
