@@ -5,12 +5,14 @@ package seedu.addressbook;
  * Yes, it is possible to write non-OO code using an OO language.
  * ====================================================================
  */
-
-import java.io.File;
+import java.io.*;
+/*import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.IOException;*/
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.*;
+/*
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -19,7 +21,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.Set;*/
 
 /* ==============NOTE TO STUDENTS======================================
  * This class header comment below is brief because details of how to
