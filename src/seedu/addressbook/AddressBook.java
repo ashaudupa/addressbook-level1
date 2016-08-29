@@ -582,11 +582,8 @@ public class AddressBook {
 	 */
 	private static boolean isDeletePersonArgsValid(String rawArgs) {
 		try {
-			final int extractedIndex = Integer.parseInt(rawArgs.trim()); // use
-																			// standard
-																			// libraries
-																			// to
-																			// parse
+			final int extractedIndex = Integer.parseInt(rawArgs.trim()); 
+			// use standard libraries to parse
 			return extractedIndex >= DISPLAYED_INDEX_OFFSET;
 		} catch (NumberFormatException nfe) {
 			return false;
@@ -643,7 +640,7 @@ public class AddressBook {
 	 *
 	 * @return feedback display message for the operation result
 	 */
-	private static String executeClearAddressBook() {
+    private static String executeClearAddressBook() {
 		clearAddressBook();
 		return MESSAGE_ADDRESSBOOK_CLEARED;
 	}
@@ -873,7 +870,8 @@ public class AddressBook {
 	 */
 	private static ArrayList<HashMap<String, String>> loadPersonsFromFile(
 			String filePath) {
-		final Optional<ArrayList<HashMap<String, String>>> successfullyDecoded = decodePersonsFromStrings(getLinesInFile(filePath));
+		final Optional<ArrayList<HashMap<String, String>>> successfullyDecoded = decodePersonsFromStrings(
+		        getLinesInFile(filePath));
 		if (!successfullyDecoded.isPresent()) {
 			showToUser(MESSAGE_INVALID_STORAGE_FILE_CONTENT);
 			exitProgram();
@@ -1501,6 +1499,6 @@ public class AddressBook {
 	 */
 	private static ArrayList<String> splitByWhitespace(String toSplit) {
 		return new ArrayList(Arrays.asList(toSplit.trim().split("\\s+")));
-	}
+    }
 
 }
