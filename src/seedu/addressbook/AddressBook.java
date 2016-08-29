@@ -358,18 +358,25 @@ public class AddressBook {
 		switch (commandType) {
 		case COMMAND_ADD_WORD:
 			return executeAddPerson(commandArgs);
+			//return statement will take you out of loop
 		case COMMAND_FIND_WORD:
 			return executeFindPersons(commandArgs);
+			////return statement will take you out of loop
 		case COMMAND_LIST_WORD:
 			return executeListAllPersonsInAddressBook();
+			//return statement will take you out of loop
 		case COMMAND_DELETE_WORD:
 			return executeDeletePerson(commandArgs);
+			//return statement will take you out of loop
 		case COMMAND_CLEAR_WORD:
 			return executeClearAddressBook();
+			//return statement will take you out of loop
 		case COMMAND_HELP_WORD:
 			return getUsageInfoForAllCommands();
+			//return statement will take you out of loop
 		case COMMAND_EXIT_WORD:
 			executeExitProgramRequest();
+			//we are executing exit method
 		default:
 			return getMessageForInvalidCommandInput(commandType,
 					getUsageInfoForAllCommands());
